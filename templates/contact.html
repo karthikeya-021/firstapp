@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Contact - College Website</title>
+</head>
+<body>
+  <h1>Contact Us</h1>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul>
+        {% for message in messages %}
+          <li>{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+  <form method="POST">
+    <input type="text" name="name" placeholder="Your name" required><br>
+    <input type="email" name="email" placeholder="Your email" required><br>
+    <textarea name="message" placeholder="Your message" required></textarea><br>
+    <button type="submit">Send</button>
+  </form>
+  <a href="/">Back to Home</a>
+</body>
+</html>

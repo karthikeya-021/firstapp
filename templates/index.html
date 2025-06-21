@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% comment %} <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -116,5 +116,22 @@
   }
 </script>
 
+</body>
+</html> {% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home - College Website</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <h1>Welcome to Our College</h1>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/courses">Courses</a>
+    <a href="/contact">Contact</a>
+    <a href="/login">Login</a>
+  </nav>
 </body>
 </html>
